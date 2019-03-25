@@ -12,6 +12,8 @@ def aShapeListNumbers(size, name = "aShape"):
         t.append(i)
     for i in range(size//2, -1, -1):
         t.append(i)
+    if size%2 == 0:
+        del t[-1]
     f = open(f"numbers generator/lists/{name} {size}.txt", "w+")
     f.write(str(t))
     f.close()
@@ -23,6 +25,8 @@ def vShapeListNumbers(size, name = "vShape"):
         t.append(i)
     for i in range(0, (size//2)+1):
         t.append(i)
+    if size%2 == 0:
+        del t[-1]
     f = open(f"numbers generator/lists/{name} {size}.txt", "w+")
     f.write(str(t))
     f.close()
@@ -40,9 +44,15 @@ def reverseListOfNumbers(size, name = "reverse"):
     f.close()
     #return sorted(list(range(size)), reverse = True)
 
-for i in range(1000, 8500, 500):
+def constList(size, name = "constant"):
+    f = open(f"numbers generator/lists/{name} {size}.txt", "w+")
+    f.write(str([1] * size))
+    f.close()
+
+for i in range(1000, 16000, 1000):
     randomListNumbers(i)
     aShapeListNumbers(i)
     vShapeListNumbers(i)
     listOfNumbers(i)
     reverseListOfNumbers(i)
+    constList(i)
