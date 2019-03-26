@@ -1,5 +1,7 @@
 import time
 from converter import convertedList
+import sys
+sys.setrecursionlimit(8000)
 
 def mainQuickSort(list):
     convList = convertedList(list)
