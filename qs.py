@@ -1,3 +1,5 @@
+#Quicksort recursive version for pivot in the middle
+
 import time
 from converter import convertedList
 import sys

@@ -1,4 +1,4 @@
-#converting string into list
+#Converter for string from file to the list
 def convertedList(name):
     t = []
     f = open("numbers generator/lists/" + name, "r")

@@ -1,3 +1,9 @@
+#Quicksort iterative version for pivot at the beginning and at the end
+#Default pivot value: 'start'
+#Examples:
+#quickSortIterative(list)
+#quickSortIterative(list, 'end')
+
 import time
 from converter import convertedList
 

@@ -5,7 +5,7 @@ from qs import mainQuickSort as qSort
 from statistics import mean as mean
 import time
 
-list_type = ['aShape', 'constant', 'ordinary', 'random', 'reverse', 'vShape']
+list_type = ['constant', 'ordinary', 'random', 'reverse', 'vShape']
 start, end, step = 1000, 8500, 500
 
 def main():
