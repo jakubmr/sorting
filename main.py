@@ -3,7 +3,6 @@ from ss import selectionSort as sSort
 from hs import heapSort as hSort
 from qs import mainQuickSort as qSort
 from statistics import mean as mean
-import time
 
 list_type = ['constant', 'ordinary', 'random', 'reverse', 'vShape']
 start, end, step = 1000, 8500, 500
@@ -13,8 +12,8 @@ def main():
     for type in list_type:
         print(f'{type} list')
         for i in range(start, end, step):
+            t = []
             for j in range(5):
-                t = []
                 t.append(iSort(f'{type} {i}.txt')[0])
             print(f"{i} elementów: ", mean(t))
 
@@ -22,8 +21,8 @@ def main():
     for type in list_type:
         print(f'{type} list')
         for i in range(start, end, step):
+            t = []
             for j in range(5):
-                t = []
                 t.append(sSort(f'{type} {i}.txt')[0])
             print(f"{i} elementów: ", mean(t))
 
@@ -31,8 +30,8 @@ def main():
     for type in list_type:
         print(f'{type} list')
         for i in range(start, end, step):
+            t = []
             for j in range(5):
-                t = []
                 t.append(hSort(f'{type} {i}.txt')[0])
             print(f"{i} elementów: ", mean(t))
 
@@ -40,8 +39,8 @@ def main():
     for type in list_type:
         print(f'{type} list')
         for i in range(start, end, step):
+            t = []
             for j in range(5):
-                t = []
                 t.append(qSort(f'{type} {i}.txt')[0])
             print(f"{i} elementów: ", mean(t))
 
